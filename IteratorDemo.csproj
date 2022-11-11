@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompositePainterFactories.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="IPainter.cs" />
+    <Compile Include="Painters.cs" />
+    <Compile Include="CompositePainter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProportionalPainter.cs" />
