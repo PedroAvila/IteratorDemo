@@ -10,7 +10,6 @@ namespace IteratorDemo
     {
         public static IPainter CreateCheapestSelector(IEnumerable<IPainter> painters) =>
             new CompositePainter<IPainter>(painters, (sqMeters, sequence) => new Painters(sequence).GetAvailable().GetCheapestOne(sqMeters));
-
         public static IPainter CreateFastestSelector(IEnumerable<IPainter> painters) =>
             new CompositePainter<IPainter>(painters, (sqMeters, sequence) => new Painters(sequence).GetAvailable().GetFastestOne(sqMeters));
 
@@ -39,6 +38,6 @@ namespace IteratorDemo
                     TimePerSqMeter = TimeSpan.FromHours(time.TotalHours / sqMeters),
                     DollarsPerHour = cost / time.TotalHours
                 };
-            })
+            });
     }
 }

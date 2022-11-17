@@ -9,8 +9,6 @@ namespace IteratorDemo
     class Program
     {
         
-        
-
         static void Main(string[] args)
         {
             IEnumerable<ProportionalPainter> painters = new ProportionalPainter[10];
